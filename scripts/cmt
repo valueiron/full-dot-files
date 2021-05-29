@@ -1,0 +1,6 @@
+#!/bin/bash
+# Reads from standard out and puts a # by default or you can put the comment as the first arugment
+
+while IFS= read -r line; do 
+  echo "${1-#} $line"
+done

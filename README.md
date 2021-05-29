@@ -1,2 +1,3 @@
 # full-dot-files
-Heavy Dev Workflow Plugins
+
+I'm still not using a ton of plugins but these configurations require dependencies to be installed

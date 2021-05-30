@@ -51,10 +51,10 @@ filetype plugin on
 if filereadable(expand("~/.vim/autoload/plug.vim"))
    call plug#begin('~/.vimplugins')
     Plug 'morhetz/gruvbox'
-    Plug 'vim-surround'
+    Plug 'tpope/vim-surround'
     Plug 'mattn/emmet-vim'
    call plug#end()
-
+endif
 
 
 "Gruvbox

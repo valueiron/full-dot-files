@@ -1,0 +1,3 @@
+#!/bin/bash
+
+perl -F: -lne 'print $F[0]'

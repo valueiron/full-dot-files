@@ -1,0 +1,19 @@
+#!/bin/sh
+
+if [ "$#" -lt 1 ];then
+  echo "Usage:"
+  exit 1
+fi
+
+NAME="$1"
+
+test -e $HOME/$NAME/ && echo "Pick a different Name Directory with $NAME already exists" && exit 1 || mkdir "$NAME" && echo "# $NAME Notes" > "$HOME/$NAME/README.md"
+
+tmux new-session -s "$NAME" -n "TERM" -d -c $HOME/$NAME/
+tmux new-window  -t "$NAME" -d -n "$NAME SCANS" -a -c "$HOME/tools/"
+tmux new-window  -t "$NAME" -d -n "$NAME NOTES" -a -c "$HOME/$NAME/"
+#tmux send-keys -t "$NAME:$NAME SCANS" "cd $HOME/tools/" Enter
+tmux send-keys -t "$NAME:$NAME NOTES" "vim README.md" Enter
+
+tmux select-window -t "$NAME:TERM"
+tmux -u attach -t "$NAME" 

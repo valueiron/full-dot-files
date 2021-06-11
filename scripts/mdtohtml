@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ $# -lt 1 ];then
+	echo "Usage: ./mdtohtml <file.md>"
+	exit 
+fi
+
+pandoc $1 \
+	--output=$(basename -s .md $1).html \
+       --to=html5 \
+       --css="$HOME/scripts/pandoc/github.css"\
+       --highlight-style=breezeDark \
+       --self-contained
+

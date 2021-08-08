@@ -12,8 +12,8 @@ shopt -s checkwinsize
 
 set -o noclobber
 set -o vi
-bind '"jk":vi-movement-mode'
 set editing-mode vi
+bind '"jk":vi-movement-mode'
 
 export HISTSIZE=1000
 export HISTFILESIZE=2000

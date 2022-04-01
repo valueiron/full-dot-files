@@ -1,2 +1,8 @@
 #!/bin/bash
 #this should symbollically link all of the dot files and install the dependencies
+
+set -e
+
+ln -sf "$PWD/.bashrc" "$HOME/.bashrc"
+ln -sf "$PWD/.bash_aliases" "$HOME/bash_aliases"
+ln -sf "$PWD/scripts" "$HOME/scripts"

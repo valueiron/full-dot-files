@@ -15,7 +15,7 @@ set -o vi
 set editing-mode vi
 bind '"jk":vi-movement-mode'
 
-export HISTSIZE=1000
+export HISTSIZE=5000
 export HISTFILESIZE=2000
 export TERM=xterm-256color
 
@@ -23,3 +23,4 @@ export TERM=xterm-256color
 PS1='\[\e[33m\]\u\[\e[m\]\[\e[34m\]@\[\e[m\]\[\e[37m\]\h\[\e[m\]:\[\e[35m\]\W\[\e[m\]'
 
 test -f ~/.bash_aliases && . ~/.bash_aliases
+test -f ~/.bash_functions && . ~/.bash_functions

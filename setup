@@ -3,6 +3,11 @@
 
 set -e
 
+#Checks if bashrc exists and if so then delete
+if test -f "$HOME/.bashrc"; then
+  rm "$HOME/.bashrc"
+fi
+
 ln -sf "$PWD/.bashrc" "$HOME/.bashrc"
-ln -sf "$PWD/.bash_aliases" "$HOME/bash_aliases"
+ln -sf "$PWD/.bash_aliases" "$HOME/.bash_aliases"
 ln -sf "$PWD/scripts" "$HOME/scripts"
